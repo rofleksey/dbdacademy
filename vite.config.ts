@@ -9,6 +9,7 @@ export default defineConfig({
       output: {
         manualChunks: {
             gsap: ['gsap'],
+          router: ['vue-router'],
         }
       }
     }

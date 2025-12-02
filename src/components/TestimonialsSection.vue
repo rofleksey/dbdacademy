@@ -49,7 +49,7 @@ const testimonials = ref<Testimonial[]>([
   {
     name: 'ANONIW',
     role: 'DBDLeague Competitor',
-    content: 'The 1v1 coaching transformed my killer game. I went from a 45% win rate in scrims to consistently 4king against top-ranked survivors.',
+    content: 'The 1v1 coaching transformed my killer game. I went from a 45% win rate in scrims to consistently 4k-ing against top-ranked survivors.',
     avatarColor: '#ff00aa'
   },
   {

@@ -30,7 +30,7 @@
         <div class="hero-stats">
           <div class="stat">
             <div class="stat-number">666+</div>
-            <div class="stat-label">Students Trained</div>
+            <div class="stat-label">Students Trained Since 2016</div>
           </div>
         </div>
 

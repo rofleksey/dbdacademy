@@ -22,10 +22,9 @@
 
           <div class="link-group">
             <h4>Legal</h4>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Refund Policy</a>
-            <a href="mailto:academy@maznevich.pro">Contact</a>
+            <router-link to="/terms">Terms of Service</router-link>
+            <router-link to="/privacy">Privacy Policy</router-link>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs">Refund Policy</a>
           </div>
         </div>
       </div>
@@ -50,10 +49,6 @@
     </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-// Footer component logic
-</script>
 
 <style scoped>
 .footer {

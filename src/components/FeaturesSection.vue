@@ -46,7 +46,7 @@ const features = ref<Feature[]>([
     color: '#ff00aa'
   },
   {
-    icon: 'fas fa-chart-network',
+    icon: 'fas fa-chess-board',
     title: 'Strategy Optimization',
     description: 'Advanced game theory, build optimization, and meta analysis from tournament perspective.',
     color: '#9d00ff'
