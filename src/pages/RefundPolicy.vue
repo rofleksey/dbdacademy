@@ -33,7 +33,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import { gsap } from 'gsap'
 
 const countdown = ref(3)
