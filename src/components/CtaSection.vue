@@ -45,10 +45,8 @@
             </div>
           </div>
 
-          <a
-              href="https://forms.gle/your-registration-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
+          <router-link
+              to="/enroll"
               class="enroll-button"
           >
             <span class="button-text">ENROLL IN DBD ACADEMY</span>
@@ -56,7 +54,7 @@
               <i class="fas fa-arrow-right"></i>
             </span>
             <div class="button-glow"></div>
-          </a>
+          </router-link>
 
           <div class="guarantee">
             <i class="fas fa-shield-alt"></i>
