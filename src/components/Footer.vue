@@ -13,14 +13,6 @@
 
         <div class="footer-links">
           <div class="link-group">
-            <h4>Program</h4>
-            <a href="#enroll">Enrollment</a>
-            <a href="#curriculum">Curriculum</a>
-            <a href="#features">Features</a>
-            <a href="#testimonials">Success Stories</a>
-          </div>
-
-          <div class="link-group">
             <h4>Connect</h4>
             <a href="https://maznevich.pro" target="_blank" rel="noopener noreferrer">Main Website</a>
             <a href="https://twitch.tv/maznevich" target="_blank" rel="noopener noreferrer">Twitch</a>
@@ -53,9 +45,6 @@
           <a href="https://steamcommunity.com/id/Maznevich" target="_blank" rel="noopener noreferrer" title="Steam">
             <i class="fab fa-steam"></i>
           </a>
-          <a href="https://discord.gg/maznevich" target="_blank" rel="noopener noreferrer" title="Discord">
-            <i class="fab fa-discord"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -75,7 +64,7 @@
 
 .footer-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin-bottom: 3rem;
 }
@@ -108,7 +97,7 @@
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 

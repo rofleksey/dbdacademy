@@ -16,7 +16,5 @@ export interface Testimonial {
     name: string;
     role: string;
     content: string;
-    beforeRank: string;
-    afterRank: string;
     avatarColor: string;
 }

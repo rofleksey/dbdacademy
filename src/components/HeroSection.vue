@@ -13,9 +13,9 @@
           </span>
         </h1>
 
-        <!-- Animated Particles -->
-        <div class="particles">
-          <div v-for="i in 20" :key="i" class="particle" :style="particleStyle(i)"></div>
+        <!-- DBD Blood Particles -->
+        <div class="blood-particles">
+          <div v-for="i in 15" :key="i" class="blood-particle" :style="bloodParticleStyle()"></div>
         </div>
       </div>
 
@@ -67,12 +67,14 @@ const scrollToFeatures = () => {
   document.querySelector('.features')?.scrollIntoView({ behavior: 'smooth' })
 }
 
-const particleStyle = () => {
-  const size = Math.random() * 4 + 2
+const bloodParticleStyle = () => {
+  const size = Math.random() * 6 + 3
   const x = Math.random() * 100
   const y = Math.random() * 100
   const delay = Math.random() * 2
   const duration = Math.random() * 3 + 2
+  const bloodColors = ['#8b0000', '#b22222', '#660000', '#a52a2a']
+  const bloodColor = bloodColors[Math.floor(Math.random() * bloodColors.length)]
 
   return {
     width: `${size}px`,
@@ -80,7 +82,9 @@ const particleStyle = () => {
     left: `${x}%`,
     top: `${y}%`,
     animationDelay: `${delay}s`,
-    animationDuration: `${duration}s`
+    animationDuration: `${duration}s`,
+    backgroundColor: bloodColor,
+    borderRadius: size > 4 ? '50%' : `${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% / ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}%`
   }
 }
 
@@ -102,15 +106,15 @@ onMounted(() => {
     ease: 'power3.out'
   })
 
-  // Particles animation
-  gsap.to('.particle', {
-    y: -20,
+  // Blood particles animation
+  gsap.to('.blood-particle', {
+    y: -40,
     opacity: 0,
-    duration: 3,
+    duration: 4,
     repeat: -1,
     ease: 'power1.inOut',
     stagger: {
-      amount: 2,
+      amount: 3,
       from: 'random'
     }
   })
@@ -170,20 +174,20 @@ onMounted(() => {
   letter-spacing: 0.3em;
 }
 
-.particles {
+.blood-particles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: -1;
 }
 
-.particle {
+.blood-particle {
   position: absolute;
-  background: var(--primary);
-  border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.4;
+  filter: blur(1px);
 }
 
 .hero-content {

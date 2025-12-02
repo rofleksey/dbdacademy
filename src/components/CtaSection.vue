@@ -13,12 +13,8 @@
           <div class="pricing-header">
             <div class="pricing-badge">ELITE PROGRAM</div>
             <div class="pricing-price">
-              <span class="amount">$999</span>
+              <span class="amount">$99</span>
               <span class="period">/ 3 months</span>
-            </div>
-            <div class="pricing-savings">
-              <i class="fas fa-bolt"></i>
-              Save $300 compared to individual sessions
             </div>
           </div>
 
