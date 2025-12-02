@@ -41,21 +41,21 @@ import { gsap } from 'gsap'
 
 const testimonials = ref<Testimonial[]>([
   {
-    name: 'Alex "Torvo" Chen',
+    name: 'HermitJKE',
     role: 'Tournament Champion',
     content: 'Went from struggling in pubs to winning my first tournament within 3 months. Maznevich\'s mindset training was game-changing.',
     avatarColor: '#00d4ff'
   },
   {
-    name: 'Sarah "Nova" Williams',
-    role: 'Content Creator',
-    content: 'The VOD analysis sessions alone were worth the investment. My YouTube channel grew from 1k to 50k subs after implementing the strategies.',
+    name: 'ANONIW',
+    role: 'DBDLeague Competitor',
+    content: 'The 1v1 coaching transformed my killer game. I went from a 45% win rate in scrims to consistently 4king against top-ranked survivors.',
     avatarColor: '#ff00aa'
   },
   {
-    name: 'Mark "Clutch" Rodriguez',
-    role: 'Team Captain',
-    content: 'My team went from local tournaments to competing internationally. The team coordination strategies are next level.',
+    name: 'Californication',
+    role: 'Scrim Team Leader',
+    content: 'Our squad\'s coordination in DBDLeague scrims improved dramatically. We now consistently dominate in tournament settings.',
     avatarColor: '#9d00ff'
   }
 ])
@@ -144,17 +144,20 @@ onMounted(() => {
 }
 
 .student-name {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
 }
 
 .student-role {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .testimonial-content {
@@ -165,9 +168,29 @@ onMounted(() => {
   padding-left: 1.5rem;
 }
 
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  font-size: 2.5rem;
+  color: var(--primary);
+  opacity: 0.7;
+  font-family: Georgia, serif;
+}
+
 @media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 0;
+  }
+
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
   }
 }
 </style>
