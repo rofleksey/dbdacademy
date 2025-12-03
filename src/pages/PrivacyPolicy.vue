@@ -13,7 +13,7 @@
           <p>
             <strong>This is a parody website with no backend functionality.</strong>
             We do not collect, store, or process any personal data because this isn't a real service.
-            The registration form links are placeholder Google Forms links that don't actually work.
+            The enrollment form is for demonstration purposes only.
           </p>
         </div>
 
@@ -46,11 +46,11 @@
         </div>
 
         <div class="section">
-          <h2>3. "Registration Form" Disclaimer</h2>
+          <h2>3. Enrollment Form Disclaimer</h2>
           <p>
-            The Google Form link in the enrollment section is a placeholder.
-            If you somehow find a working form, it's not operated by us and any data submitted
-            would be governed by Google's privacy policy, not ours.
+            The enrollment form on this website is for demonstration purposes only.
+            Any data entered into the form is processed client-side and not transmitted to any server.
+            The form submission shows a success message but does not actually submit your data anywhere.
           </p>
         </div>
 
