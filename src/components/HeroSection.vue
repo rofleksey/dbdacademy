@@ -12,11 +12,6 @@
             ELITE TRAINING PROGRAM
           </span>
         </h1>
-
-        <!-- DBD Blood Particles -->
-        <div class="blood-particles">
-          <div v-for="i in 15" :key="i" class="blood-particle" :style="bloodParticleStyle()"></div>
-        </div>
       </div>
 
       <!-- Hero Content -->
@@ -67,27 +62,6 @@ const scrollToFeatures = () => {
   document.querySelector('.features')?.scrollIntoView({ behavior: 'smooth' })
 }
 
-const bloodParticleStyle = () => {
-  const size = Math.random() * 6 + 3
-  const x = Math.random() * 100
-  const y = Math.random() * 100
-  const delay = Math.random() * 2
-  const duration = Math.random() * 3 + 2
-  const bloodColors = ['#8b0000', '#b22222', '#660000', '#a52a2a']
-  const bloodColor = bloodColors[Math.floor(Math.random() * bloodColors.length)]
-
-  return {
-    width: `${size}px`,
-    height: `${size}px`,
-    left: `${x}%`,
-    top: `${y}%`,
-    animationDelay: `${delay}s`,
-    animationDuration: `${duration}s`,
-    backgroundColor: bloodColor,
-    borderRadius: size > 4 ? '50%' : `${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% / ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}% ${Math.random() * 50 + 25}%`
-  }
-}
-
 onMounted(() => {
   // Hero title animation
   gsap.from('.hero-title', {
@@ -104,19 +78,6 @@ onMounted(() => {
     duration: 1,
     delay: 0.5,
     ease: 'power3.out'
-  })
-
-  // Blood particles animation
-  gsap.to('.blood-particle', {
-    y: -40,
-    opacity: 0,
-    duration: 4,
-    repeat: -1,
-    ease: 'power1.inOut',
-    stagger: {
-      amount: 3,
-      from: 'random'
-    }
   })
 })
 </script>
@@ -172,23 +133,6 @@ onMounted(() => {
   font-size: 1.5rem;
   color: var(--text-secondary);
   letter-spacing: 0.3em;
-}
-
-.blood-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.blood-particle {
-  position: absolute;
-  opacity: 0.4;
-  filter: blur(1px);
 }
 
 .hero-content {
@@ -453,10 +397,6 @@ onMounted(() => {
     font-size: 1rem;
     min-width: 240px;
     gap: 0.8rem;
-  }
-
-  .blood-particles {
-    display: none;
   }
 }
 
