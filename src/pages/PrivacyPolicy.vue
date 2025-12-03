@@ -21,24 +21,26 @@
           <h2>1. Information We Don't Collect</h2>
           <p>
             Since DBD Academy is a fictional parody project, we don't collect:
-            <ul>
-              <li>Personal information (names, emails, addresses)</li>
-              <li>Payment information (no real payments are processed)</li>
-              <li>Usage data (no analytics tracking)</li>
-              <li>Cookies (except essential browser cookies)</li>
-            </ul>
           </p>
+          <ul>
+            <li>Personal information (names, emails, addresses)</li>
+            <li>Payment information (no real payments are processed)</li>
+            <li>Usage data (no analytics tracking)</li>
+            <li>Cookies (except essential browser cookies)</li>
+          </ul>
         </div>
 
         <div class="section">
           <h2>2. Third-Party Services</h2>
           <p>
             This website uses:
-            <ul>
-              <li>Font Awesome (for icons) - their privacy policy applies</li>
-              <li>Google Fonts - their privacy policy applies</li>
-              <li>Cloudflare CDN - for library delivery</li>
-            </ul>
+          </p>
+          <ul>
+            <li>Font Awesome (for icons) - their privacy policy applies</li>
+            <li>Google Fonts - their privacy policy applies</li>
+            <li>Cloudflare CDN - for library delivery</li>
+          </ul>
+          <p>
             These services may collect usage data according to their own policies.
           </p>
         </div>
@@ -56,12 +58,12 @@
           <h2>4. Browser Storage</h2>
           <p>
             This website may use browser localStorage for:
-            <ul>
-              <li>Animation preferences (if implemented)</li>
-              <li>Scroll position (for UX)</li>
-              <li>No personal data is stored locally</li>
-            </ul>
           </p>
+          <ul>
+            <li>Animation preferences (if implemented)</li>
+            <li>Scroll position (for UX)</li>
+            <li>No personal data is stored locally</li>
+          </ul>
         </div>
 
         <div class="section">
@@ -117,7 +119,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Same styles as TermsOfService.vue - can be extracted to a shared component if desired */
 .legal-page {
   min-height: 100vh;
   padding: 120px 0 60px;
@@ -191,6 +192,11 @@ onMounted(() => {
 .section p {
   color: var(--text-secondary);
   line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
 }
 
 .section ul {

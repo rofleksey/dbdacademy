@@ -7,7 +7,6 @@ import './styles/globals.css'
 import HomePage from './pages/Home.vue'
 import TermsOfService from './pages/TermsOfService.vue'
 import PrivacyPolicy from './pages/PrivacyPolicy.vue'
-import RefundPolicy from './pages/RefundPolicy.vue'
 import EnrollmentForm from './pages/EnrollmentForm.vue'
 
 // Import GSAP and Lenis for smooth scroll
@@ -22,7 +21,6 @@ const router = createRouter({
         { path: '/', component: HomePage },
         { path: '/terms', component: TermsOfService },
         { path: '/privacy', component: PrivacyPolicy },
-        { path: '/refund', component: RefundPolicy },
         { path: '/enroll', component: EnrollmentForm },
     ],
     scrollBehavior(_1, _2, savedPosition) {
