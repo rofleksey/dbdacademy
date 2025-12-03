@@ -283,6 +283,7 @@
         <div class="form-footer">
           <p><i class="fas fa-shield-alt"></i> All data is encrypted and securely stored</p>
           <p><i class="fas fa-clock"></i> You'll hear back from us within 48 hours</p>
+          <p><i class="fas fa-envelope"></i> Questions? Contact: <a href="mailto:academy@maznevich.pro">academy@maznevich.pro</a></p>
         </div>
       </form>
 

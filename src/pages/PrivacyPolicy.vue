@@ -79,7 +79,8 @@
           <h2>6. Contact & Questions</h2>
           <p>
             Since we don't collect data, there's nothing to inquire about regarding your data.
-            For questions about this parody project itself, check the GitHub repository.
+            For questions about this parody project itself, you can contact us at:
+            <a href="mailto:academy@maznevich.pro">academy@maznevich.pro</a>
           </p>
         </div>
 

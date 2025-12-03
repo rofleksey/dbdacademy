@@ -61,7 +61,8 @@
         <div class="section">
           <h2>6. Contact (For Real Inquiries)</h2>
           <p>
-            If you have actual questions about this parody project, you can reach out via GitHub.
+            If you have actual questions about this parody project, you can contact us at:
+            <a href="mailto:academy@maznevich.pro">academy@maznevich.pro</a>
             For real Dead by Daylight coaching, please seek legitimate services elsewhere.
           </p>
         </div>

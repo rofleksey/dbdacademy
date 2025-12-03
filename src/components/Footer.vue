@@ -18,6 +18,7 @@
             <a href="https://twitch.tv/maznevich" target="_blank" rel="noopener noreferrer">Twitch</a>
             <a href="https://youtube.com/@maznevich" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://steamcommunity.com/id/Maznevich" target="_blank" rel="noopener noreferrer">Steam</a>
+            <a href="mailto:academy@maznevich.pro">Email</a>
           </div>
 
           <div class="link-group">
