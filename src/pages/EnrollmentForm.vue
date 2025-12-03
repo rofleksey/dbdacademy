@@ -44,7 +44,7 @@
         <!-- Game Nickname -->
         <div class="form-section">
           <div class="section-header">
-            <h3>Your game nickname (in Steam, PS, Xbox, etc.):</h3>
+            <h3>Your game nickname (Steam, PS, Xbox, etc.):</h3>
             <span class="required">*</span>
           </div>
           <div class="input-group">

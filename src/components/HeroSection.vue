@@ -182,6 +182,7 @@ onMounted(() => {
   height: 100%;
   pointer-events: none;
   z-index: -1;
+  overflow: hidden;
 }
 
 .blood-particle {
@@ -213,6 +214,7 @@ onMounted(() => {
   justify-content: center;
   gap: 4rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .stat {
@@ -335,27 +337,142 @@ onMounted(() => {
   letter-spacing: 0.1em;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-title .title-line:first-child {
+    font-size: 5rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  .hero .container {
+    padding: 0 !important;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 40px;
+    min-height: 90vh;
+  }
+
+  .hero .container {
+    padding: 0 !important;
+  }
+
+  .hero-title-wrapper {
+    margin-bottom: 2.5rem;
+  }
+
   .hero-title .title-line:first-child {
     font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .text-outline {
+    margin-left: 0.5rem;
+    -webkit-text-stroke: 1.5px var(--primary);
+    text-stroke: 1.5px var(--primary);
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    padding: 0 10px;
+  }
+
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
   }
 
   .hero-stats {
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat {
+    min-width: auto;
   }
 
   .stat-number {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-cta {
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    min-width: 260px;
+    margin-bottom: 3rem;
+  }
+
+  .mouse {
+    width: 26px;
+    height: 44px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-title .title-line:first-child {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-description {
     font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .hero-cta {
+    padding: 1.1rem 2rem;
+    font-size: 1rem;
+    min-width: 240px;
+    gap: 0.8rem;
+  }
+
+  .blood-particles {
+    display: none;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .hero-title .title-line:first-child {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hero-cta {
+    min-width: 220px;
+    padding: 1rem 1.8rem;
   }
 }
 </style>
