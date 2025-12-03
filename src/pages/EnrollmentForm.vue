@@ -15,7 +15,8 @@
           Back
         </router-link>
         <h1>Enrollment to <span class="academy-text">DBD Academy</span></h1>
-        <p class="subtitle">Hello, future student! Fill out this form so we can match you with the right training program and mentor. All responses are confidential.</p>
+        <p class="subtitle">Hello, future student! Fill out this form so we can match you with the right training
+          program and mentor. All responses are confidential.</p>
       </div>
 
       <form class="enrollment-form" @submit.prevent="submitForm">
@@ -241,20 +242,24 @@
           </div>
         </div>
 
-        <!-- Consent -->
+        <!-- Terms of Service Consent -->
         <div class="form-section consent-section">
           <div class="section-header">
-            <h3>I consent to the processing of my data and to being contacted on Discord for details</h3>
+            <h3>I have read and agree to the
+              <router-link to="/terms" target="_blank" class="terms-link">
+                Terms of Service
+              </router-link>
+            </h3>
             <span class="required">*</span>
           </div>
           <div class="radio-group consent-options">
             <label
                 class="radio-option"
-                :class="{ selected: formData.consent === 'yes' }"
+                :class="{ selected: formData.termsAgreed === 'yes' }"
             >
               <input
                   type="radio"
-                  v-model="formData.consent"
+                  v-model="formData.termsAgreed"
                   value="yes"
                   required
                   class="radio-input"
@@ -283,7 +288,6 @@
         <div class="form-footer">
           <p><i class="fas fa-shield-alt"></i> All data is encrypted and securely stored</p>
           <p><i class="fas fa-clock"></i> You'll hear back from us within 48 hours</p>
-          <p><i class="fas fa-envelope"></i> Questions? Contact: <a href="mailto:academy@maznevich.pro">academy@maznevich.pro</a></p>
         </div>
       </form>
 
@@ -294,7 +298,8 @@
             <i class="fas fa-check-circle"></i>
           </div>
           <h2>Application Submitted!</h2>
-          <p>Thank you for your interest in DBD Academy. We'll review your application and contact you on Discord within 48 hours.</p>
+          <p>Thank you for your interest in DBD Academy. We'll review your application and contact you on Discord within
+            48 hours.</p>
           <p class="application-id">Application ID: <span>{{ applicationId }}</span></p>
           <div class="modal-actions">
             <router-link to="/" class="modal-button">
@@ -311,9 +316,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue'
-import { gsap } from 'gsap'
-import { useRouter } from 'vue-router'
+import {ref, reactive, onMounted} from 'vue'
+import {gsap} from 'gsap'
+import {useRouter} from 'vue-router'
 
 const router = useRouter()
 const isSubmitting = ref(false)
@@ -332,58 +337,58 @@ const formData = reactive({
   learningFormat: '',
   discoverySource: '',
   comments: '',
-  consent: ''
+  termsAgreed: ''
 })
 
 // Form options
 const skillLevels = [
-  { value: 'beginner', label: 'Complete beginner (less than 100 hours)' },
-  { value: 'intermediate', label: 'Know basics but want consistency (100-300 hours)' },
-  { value: 'advanced', label: 'Experienced, want high rank / fix mistakes (300+ hours)' },
-  { value: 'veteran', label: 'Veteran (1000+ hours), seeking fine-tuning and advanced tactics' }
+  {value: 'beginner', label: 'Complete beginner (less than 100 hours)'},
+  {value: 'intermediate', label: 'Know basics but want consistency (100-300 hours)'},
+  {value: 'advanced', label: 'Experienced, want high rank / fix mistakes (300+ hours)'},
+  {value: 'veteran', label: 'Veteran (1000+ hours), seeking fine-tuning and advanced tactics'}
 ]
 
 const focusRoles = [
-  { value: 'survivor', label: 'Survivor gameplay' },
-  { value: 'killer', label: 'Killer gameplay' },
-  { value: 'both', label: 'Want to improve both roles' }
+  {value: 'survivor', label: 'Survivor gameplay'},
+  {value: 'killer', label: 'Killer gameplay'},
+  {value: 'both', label: 'Want to improve both roles'}
 ]
 
 const trainingGoals = [
-  { value: 'basics', label: 'Understanding basic mechanics and perks' },
-  { value: 'looping', label: 'Learning effective looping' },
-  { value: 'mindgames', label: 'Improving mental game' },
-  { value: 'mmr', label: 'Getting out of low/mid MMR' },
-  { value: 'killer', label: 'Learning to play specific complex killer' },
-  { value: 'team', label: 'Finding teammates to play with' },
-  { value: 'feedback', label: 'Just curious what an experienced player would say' }
+  {value: 'basics', label: 'Understanding basic mechanics and perks'},
+  {value: 'looping', label: 'Learning effective looping'},
+  {value: 'mindgames', label: 'Improving mental game'},
+  {value: 'mmr', label: 'Getting out of low/mid MMR'},
+  {value: 'killer', label: 'Learning to play specific complex killer'},
+  {value: 'team', label: 'Finding teammates to play with'},
+  {value: 'feedback', label: 'Just curious what an experienced player would say'}
 ]
 
 const preferredTimes = [
-  { value: 'morning', label: 'Morning (9:00 - 12:00 MSK)' },
-  { value: 'day', label: 'Day (12:00 - 18:00 MSK)' },
-  { value: 'evening', label: 'Evening (18:00 - 23:00 MSK)' },
-  { value: 'night', label: 'Night (23:00 - 03:00 MSK)' }
+  {value: 'morning', label: 'Morning (9:00 - 12:00 MSK)'},
+  {value: 'day', label: 'Day (12:00 - 18:00 MSK)'},
+  {value: 'evening', label: 'Evening (18:00 - 23:00 MSK)'},
+  {value: 'night', label: 'Night (23:00 - 03:00 MSK)'}
 ]
 
 const learningFormats = [
-  { value: 'vods', label: 'Individual VOD reviews (watch your match + give feedback)' },
-  { value: 'coaching', label: 'Co-games with mentor' },
-  { value: 'lectures', label: 'Group lectures/streams on theory' },
-  { value: 'guides', label: 'Text guides and Q&A in Discord is enough' }
+  {value: 'vods', label: 'Individual VOD reviews (watch your match + give feedback)'},
+  {value: 'coaching', label: 'Co-games with mentor'},
+  {value: 'lectures', label: 'Group lectures/streams on theory'},
+  {value: 'guides', label: 'Text guides and Q&A in Discord is enough'}
 ]
 
 const discoverySources = [
-  { value: 'youtube', label: 'YouTube' },
-  { value: 'twitch', label: 'Twitch' },
-  { value: 'tiktok', label: 'TikTok / Reels' },
-  { value: 'friends', label: 'From friends' },
-  { value: 'other', label: 'Other' }
+  {value: 'youtube', label: 'YouTube'},
+  {value: 'twitch', label: 'Twitch'},
+  {value: 'tiktok', label: 'TikTok / Reels'},
+  {value: 'friends', label: 'From friends'},
+  {value: 'other', label: 'Other'}
 ]
 
 const submitForm = async () => {
-  if (!formData.consent) {
-    alert('Please consent to data processing to continue')
+  if (!formData.termsAgreed) {
+    alert('Please agree to the Terms of Service to continue')
     return
   }
 
@@ -415,7 +420,7 @@ const clearForm = () => {
       discoverySource: '',
       otherSource: '',
       comments: '',
-      consent: ''
+      termsAgreed: ''
     })
   }
 }
@@ -429,7 +434,7 @@ const submitAnother = () => {
   showSuccess.value = false
   clearForm()
   // Scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({top: 0, behavior: 'smooth'})
 }
 
 onMounted(() => {
@@ -533,9 +538,8 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image:
-      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black 40%, transparent 60%);
 }
@@ -932,8 +936,12 @@ onMounted(() => {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content {
@@ -967,9 +975,15 @@ onMounted(() => {
 }
 
 @keyframes scaleIn {
-  0% { transform: scale(0); }
-  70% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .modal-content h2 {
